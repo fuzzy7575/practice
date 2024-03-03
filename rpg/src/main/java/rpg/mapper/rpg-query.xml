@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment/>
+    <!-- 성으로 직원 조회용 쿼리 -->
+    <entry key="selectEmpByFamilyName">
+        SELECT
+            E.*
+        FROM
+            EMPLOYEE E
+        WHERE
+            E.EMP_NAME LIKE CONCAT(?, '%')
+    </entry>
+    <entry key="insertUser">
+        INSERT
+        INTO TBL_USER (
+            USER_NAME,
+            USER_CHARM,
+            USER_BAG,
+            USER_MONEY
+        )
+        VALUES (?, ?, ?, ?)
+    </entry>
+    <entry key="updateCharm">
+        UPDATE TBL_CHARM
+            SET CHARM = ?
+        WHERE
+            USER_CODE = ? AND
+            NPC_CODE = ?
+    </entry>
+</properties>
