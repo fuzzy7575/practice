@@ -23,18 +23,30 @@ public class MainController {
             new NPCDTO("조현", 15)
     };
 
-    private final ItemShop<Clothes> clothesItemShop = new ItemShop<>(new ArrayList<>(
-            List.of(new Clothes("정장", 100000, 30),
-                    new Clothes("셔츠와 청바지", 25000, 5),
-                    new Clothes("체크 셔츠에 멜빵바지", 15000, -10),
-                    new Clothes("구찌백", 1000000, -1000))));
+//    private final ItemShop<Clothes> clothesItemShop = new ItemShop<>(new ArrayList<>(
+//            List.of(new Clothes("정장", 100000, 30),
+//                    new Clothes("셔츠와 청바지", 25000, 5),
+//                    new Clothes("체크 셔츠에 멜빵바지", 15000, -10),
+//                    new Clothes("구찌백", 1000000, -1000))));
+//
+//    private final ItemShop<Gift> giftItemShop = new ItemShop<>(new ArrayList<>(List.of(
+//            new Gift("꽃다발", 30000, 20),
+//            new Gift("케이크", 45000, 30),
+//            new Gift("발가락 양말", 3000, -20),
+//            new Gift("슈퍼카", 100000000, -1000)
+//    )));
 
-    private final ItemShop<Gift> giftItemShop = new ItemShop<>(new ArrayList<>(List.of(
-            new Gift("꽃다발", 30000, 20),
-            new Gift("케이크", 45000, 30),
-            new Gift("발가락 양말", 3000, -20),
-            new Gift("슈퍼카", 100000000, -1000)
-    )));
+    //    public ItemDTO(int itemCode, int itemCategory, String itemName, int itemPrice, int itemCharm)
+    //    public ClothesDTO(int itemCode, int itemCategory, String itemName, int itemPrice, int itemCharm)
+    private final List<ItemDTO> itemList = new ArrayList<>(List.of(
+    new ClothesDTO(1, 1, "정장", 100000, 30),
+    new ClothesDTO(2, 1, "셔츠와 청바지", 25000, 5),
+    new ClothesDTO(3, 1, "체크 셔츠에 멜빵바지", 15000, -10),
+    new ClothesDTO(4, 1, "구찌백", 1000000, -1000),
+    new GiftDTO(5, 2, "꽃다발", 30000, 20),
+    new GiftDTO(6, 2, "케이크", 45000, 30),
+    new GiftDTO(7, 2, "발가락 양말", 3000, -20),
+    new GiftDTO(8, 2, "슈퍼카", 100000000, -1000)));
 
     public MainController() {
     }
