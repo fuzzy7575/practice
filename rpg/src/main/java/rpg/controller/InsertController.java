@@ -14,7 +14,6 @@ import static rpg.common.JDBCTemplate.getConnection;
 
 public class InsertController {
 
-    Connection con = getConnection();
     Properties prop = new Properties();
 
     public InsertController() {
@@ -27,6 +26,7 @@ public class InsertController {
 
     public int insertUser(UserDTO newUser) {
 
+        Connection con = getConnection();
         PreparedStatement pstmt = null;
         int result = 0;
 
