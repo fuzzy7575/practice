@@ -14,7 +14,6 @@ import static rpg.common.JDBCTemplate.getConnection;
 
 public class UpdateController {
 
-    Connection con = getConnection();
     Properties prop = new Properties();
     public UpdateController() {
         try {
@@ -26,6 +25,7 @@ public class UpdateController {
 
     public int updateCharm(CharmDTO changeCharm) {
 
+        Connection con = getConnection();
         PreparedStatement pstmt = null;
         int result = 0;
 

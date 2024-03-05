@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
+    <!-- 유저정보 조회용 쿼리 -->
+    <entry key="selectUserInfo">
+        SELECT
+            USER_NAME,
+            USER_CHARM,
+            USER_BAG,
+            USER_MONEY
+        FROM
+            TBL_USER
+        WHERE
+            USER_CODE = ?
+    </entry>
     <!-- 유저 추가 -->
     <entry key="insertUser">
         INSERT
