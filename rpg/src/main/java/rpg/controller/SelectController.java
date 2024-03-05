@@ -59,11 +59,11 @@ public class SelectController {
             while(rset.next()) {
                 row = new UserDTO();
 
-                row.setName(rset.getString("USER_NAME"));
-                row.setCharm(rset.getString("USER_CHARM"));
-                row.setBag(rset.getString("USER_BAG"));
-                row.setEquippedItem(rset.getString("USER_EQUIPPED"));
-                row.setMoney(rset.getString("USER_MONEY"));
+                row.setUserName(rset.getString("USER_NAME"));
+                row.setUserCharm(rset.getInt("USER_CHARM"));
+                row.setUserBag(rset.getInt("USER_BAG"));
+                row.setEquippedItem(rset.getInt("USER_EQUIPPED"));
+                row.setUserMoney(rset.getInt("USER_MONEY"));
 
                 userList.add(row);
             }

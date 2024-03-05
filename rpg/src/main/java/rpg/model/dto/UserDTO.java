@@ -5,14 +5,14 @@ public class UserDTO {
     private int userCode;
     private String userName;
     private int userCharm;
-    private BagDTO userBag;
-    private ItemDTO equippedItem;
+    private int userBag;
+    private int equippedItem;
     private int userMoney;
 
     public UserDTO() {
     }
 
-    public UserDTO(int userCode, String userName, int userCharm, BagDTO userBag, ItemDTO equippedItem, int userMoney) {
+    public UserDTO(int userCode, String userName, int userCharm, int userBag, int equippedItem, int userMoney) {
         this.userCode = userCode;
         this.userName = userName;
         this.userCharm = userCharm;
@@ -45,19 +45,19 @@ public class UserDTO {
         this.userCharm = userCharm;
     }
 
-    public BagDTO getUserBag() {
+    public int getUserBag() {
         return userBag;
     }
 
-    public void setUserBag(BagDTO userBag) {
+    public void setUserBag(int userBag) {
         this.userBag = userBag;
     }
 
-    public ItemDTO getEquippedItem() {
+    public int getEquippedItem() {
         return equippedItem;
     }
 
-    public void setEquippedItem(ItemDTO equippedItem) {
+    public void setEquippedItem(int equippedItem) {
         this.equippedItem = equippedItem;
     }
 
@@ -71,13 +71,20 @@ public class UserDTO {
 
     @Override
     public String toString() {
-        return "UserDTO{" +
-                "userCode=" + userCode +
-                ", userName='" + userName + '\'' +
-                ", userCharm=" + userCharm +
-                ", userBag=" + userBag +
-                ", equippedItem=" + equippedItem +
-                ", userMoney=" + userMoney +
-                '}';
+        return "■ ■ 내 상태 ■ ■ " + "\n"
+                + "[이름] : " + userName + "\n"
+                + "[나의 매력도] : " + userCharm + "\n"
+                + "[소지품] : " + userBag + "\n"
+                + "[착용한 옷] : " + equippedItem + "\n"
+                + "[소지한 돈] : " + userMoney + "원";
     }
+//    @Override
+//    public String toString() {
+//        return "■ ■ 내 상태 ■ ■ " + "\n"
+//                + "[이름] : " + name + "\n"
+//                + "[나의 매력도] : " + charm + "\n"
+//                + "[소지품] : " + inventoryStore.toString() + "\n"
+//                + "[착용한 옷] : " + (equippedItem == null ? "없음" : equippedItem) + "\n"
+//                + "[소지한 돈] : " + money + "원";
+//    }
 }

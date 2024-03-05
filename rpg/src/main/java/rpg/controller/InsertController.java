@@ -52,4 +52,36 @@ public class InsertController {
         return result;
 
     }
+
+
+    public void insertUserItem(int itemCode) {
+
+        int bagCode = 1;
+
+        Connection con = getConnection();
+        PreparedStatement pstmt = null;
+        int result = 0;
+
+        try {
+            String query = prop.getProperty("insertUserItem");
+            System.out.println(query);
+
+            pstmt = con.prepareStatement(query);
+            pstmt.setInt(1, bagCode);
+            pstmt.setInt(2, itemCode);
+            pstmt.setInt(3, bagCode);
+            pstmt.setInt(4, itemCode);
+
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }   finally {
+            close(pstmt);
+            close(con);
+        }
+
+//        return result;
+
+    }
 }
